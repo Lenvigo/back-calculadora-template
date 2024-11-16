@@ -1,0 +1,17 @@
+# Ignorar archivos y carpetas innecesarias
+*.pyc
+*.pyo
+__pycache__/
+.env
+*.log
+.vscode/
+.idea/
+.DS_Store
+
+# Ignorar carpetas de control de versiones
+.git/
+.gitignore
+
+# Ignorar dependencias locales
+venv/
+.virtualenv/

@@ -1,21 +1,20 @@
 # Usa una imagen base
 FROM python:3.11
 
-# Establece el directorio de trabajo dentro del contenedor
+# Establecer el directorio de trabajo
 WORKDIR /app
 
-# Copia el archivo requirements.txt al contenedor
+# Copiar los archivos necesarios
 COPY requirements.txt .
+COPY main.py .
+COPY calculadora.py .
 
-# Instala las dependencias desde requirements.txt
+# Instalar las dependencias
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copia el resto de los archivos del proyecto al contenedor
-COPY . .
-
-# Expón el puerto 8000
+# Exponer el puerto donde se ejecutará FastAPI
 EXPOSE 8000
 
-# Comando para ejecutar Uvicorn
+# Comando para iniciar la aplicación
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 
