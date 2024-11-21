@@ -6,11 +6,12 @@ WORKDIR /app
 
 # Copiar los archivos necesarios
 COPY requirements.txt .
-COPY main.py .
-COPY calculadora.py .
 
 # Instalar las dependencias
 RUN pip install --no-cache-dir -r requirements.txt
+
+# Copia el resto de los archivos del proyecto al contenedor
+COPY . .
 
 # Exponer el puerto donde se ejecutará FastAPI
 EXPOSE 8000
