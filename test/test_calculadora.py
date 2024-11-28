@@ -32,5 +32,4 @@ def test_dividir(calc):
 
 def test_dividir_por_cero(calc): 
     result = calc.dividir(5, 0) 
-    assert result == "Error: No se puede dividir entre cero"
-    
+    assert result == "Error: No se puede dividir entre cero" 
