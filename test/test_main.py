@@ -1,5 +1,3 @@
-import sys 
-import os
 from fastapi.testclient import TestClient
 
 # Añadir el directorio superior al PYTHONPATH 

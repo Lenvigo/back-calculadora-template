@@ -32,7 +32,7 @@ jobs:
 
       # Ejecutar Lint (Ruff)
       - name: Run Ruff Lint
-        run: ruff test/
+        run: ruff check --fix
 
   # Job 2: Build y Push a DockerHub
   dockerhub:
