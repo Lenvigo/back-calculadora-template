@@ -26,4 +26,6 @@ def test_dividir(calc):
     assert calc.dividir(0, 5) == 0
 
 def test_dividir_por_cero(calc):
-    assert calc.dividir(5, 0) == "Error: No se puede dividir entre cero"
+    result = calc.dividir(5, 0)
+    assert "error" in result
+    assert result["error"] == "No se puede dividir entre cero"
