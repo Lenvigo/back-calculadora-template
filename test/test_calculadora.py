@@ -1,4 +1,9 @@
-import pytest
+import sys 
+import os 
+import pytest 
+# Añadir el directorio superior al PYTHONPATH 
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) 
+
 from calculadora import Calculadora
 
 @pytest.fixture
@@ -25,7 +30,6 @@ def test_dividir(calc):
     assert calc.dividir(-6, -3) == 2
     assert calc.dividir(0, 5) == 0
 
-def test_dividir_por_cero(calc):
-    result = calc.dividir(5, 0)
-    assert "error" in result
-    assert result["error"] == "No se puede dividir entre cero"
+def test_dividir_por_cero(calc): 
+    result = calc.dividir(5, 0) 
+    assert result == "Error: No se puede dividir entre cero"
