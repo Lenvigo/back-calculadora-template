@@ -3,7 +3,7 @@ name: Backend CI/CD
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   # Job 1: Ejecutar tests y Lint
