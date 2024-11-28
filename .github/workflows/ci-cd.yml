@@ -28,11 +28,11 @@ jobs:
 
       # Ejecutar Pytest
       - name: Run Pytest
-        run: pytest tests/
+        run: pytest test/
 
       # Ejecutar Lint (Ruff)
       - name: Run Ruff Lint
-        run: ruff src/ tests/
+        run: ruff test/
 
   # Job 2: Build y Push a DockerHub
   dockerhub:
