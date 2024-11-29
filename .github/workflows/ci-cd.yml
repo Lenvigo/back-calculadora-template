@@ -76,5 +76,5 @@ jobs:
       # Build y Push
       - name: Build and Push Docker image to GitHub Container Registry
         run: |
-          docker build -t ghcr.io/${{ github.repository }}/backend-app:latest .
-          docker push ghcr.io/${{ github.repository }}/backend-app:latest
+          docker build -t ghcr.io/${{ github.actor }}/${{github.repository}}:latest .
+          docker push ghcr.io/${{ github.actor }}/${{github.repository}}:latest
